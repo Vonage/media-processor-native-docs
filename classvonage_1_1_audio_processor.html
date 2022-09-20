@@ -86,9 +86,10 @@ Inheritance diagram for vonage::AudioProcessor:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a6d6d0aae373be5f30824da48be12ce63"><td class="memItemLeft" align="right" valign="top"><a id="a6d6d0aae373be5f30824da48be12ce63" name="a6d6d0aae373be5f30824da48be12ce63"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>AudioProcessor</b> (rtc::scoped_refptr&lt; webrtc::PeerConnectionInterface &gt; peer_connection)</td></tr>
+<tr class="memitem:a6d6d0aae373be5f30824da48be12ce63"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvonage_1_1_audio_processor.html#a6d6d0aae373be5f30824da48be12ce63">AudioProcessor</a> (rtc::scoped_refptr&lt; webrtc::PeerConnectionInterface &gt; peer_connection)</td></tr>
 <tr class="separator:a6d6d0aae373be5f30824da48be12ce63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17d8695c4d5a691f85aea32449f30c8c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvonage_1_1_audio_processor.html#a17d8695c4d5a691f85aea32449f30c8c">AudioProcessor</a> (rtc::scoped_refptr&lt; webrtc::PeerConnectionInterface &gt; peer_connection, rtc::Thread *worker_thread)</td></tr>
+<tr class="separator:a17d8695c4d5a691f85aea32449f30c8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9107ebf6bd3be0b1148f16ca94008acf"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvonage_1_1_audio_processor.html#a9107ebf6bd3be0b1148f16ca94008acf">SetVonageMedatata</a> (const <a class="el" href="structvonage_1_1_vonage_metadata.html">VonageMetadata</a> &amp;metadata) override</td></tr>
 <tr class="separator:a9107ebf6bd3be0b1148f16ca94008acf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9e6db355581f8267fcdfd1b7b476986a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structvonage_1_1_vonage_metadata.html">VonageMetadata</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvonage_1_1_audio_processor.html#a9e6db355581f8267fcdfd1b7b476986a">GetVonageMedatata</a> () const override</td></tr>
@@ -109,7 +110,58 @@ Public Member Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p ><a class="el" href="classvonage_1_1_audio_processor.html">AudioProcessor</a> class definition.</p>
 <p >Represents the media processor for audio. </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a6d6d0aae373be5f30824da48be12ce63" name="a6d6d0aae373be5f30824da48be12ce63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d6d0aae373be5f30824da48be12ce63">&#9670;&nbsp;</a></span>AudioProcessor() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vonage::AudioProcessor::AudioProcessor </td>
+          <td>(</td>
+          <td class="paramtype">rtc::scoped_refptr&lt; webrtc::PeerConnectionInterface &gt;&#160;</td>
+          <td class="paramname"><em>peer_connection</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p ><a class="el" href="classvonage_1_1_audio_processor.html">AudioProcessor</a> constructor</p>
+<p >Use this constructor when the peer connection instance was created from a peer connection factory instance where the WebRTC worker thread was not provided (the application did not create the WebRTC worker thread). The developer must ensure the worker thread outlives the peer connection instance. </p>
+
+</div>
+</div>
+<a id="a17d8695c4d5a691f85aea32449f30c8c" name="a17d8695c4d5a691f85aea32449f30c8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17d8695c4d5a691f85aea32449f30c8c">&#9670;&nbsp;</a></span>AudioProcessor() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vonage::AudioProcessor::AudioProcessor </td>
+          <td>(</td>
+          <td class="paramtype">rtc::scoped_refptr&lt; webrtc::PeerConnectionInterface &gt;&#160;</td>
+          <td class="paramname"><em>peer_connection</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">rtc::Thread *&#160;</td>
+          <td class="paramname"><em>worker_thread</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p ><a class="el" href="classvonage_1_1_audio_processor.html">AudioProcessor</a> constructor</p>
+<p >Use this constructor when the peer connection instance was created from a peer connection factory instance where the WebRTC worker thread was provided (the application created the WebRTC worker thread). The developer must ensure the worker thread outlives the peer connection instance. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a id="a9e6db355581f8267fcdfd1b7b476986a" name="a9e6db355581f8267fcdfd1b7b476986a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9e6db355581f8267fcdfd1b7b476986a">&#9670;&nbsp;</a></span>GetVonageMedatata()</h2>
 
